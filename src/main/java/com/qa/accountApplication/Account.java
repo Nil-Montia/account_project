@@ -23,9 +23,9 @@ public class Account {
 		this.accountNumber = accountNumber;
 	}
 	public Account(String fname, String lname, int accountNumber) {
-		this.fname = fname;
-		this.lname = lname;
-		this.accountNumber = accountNumber;
+		this.setFname(fname);
+		this.setLname(lname);
+		this.setAccountNumber(accountNumber);
 	}
 	
 }

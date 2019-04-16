@@ -26,7 +26,15 @@ public class AccountService {
     }
 
     public int nameCycle(String fname){
-        return 2;
+        int count=0;
+	    for (int k : map.keySet()){
+	        if (map.get(k).getFname().equals(fname)){
+                count++;
+            }
+        }
+        return count;
 	}
+
+
 
 }

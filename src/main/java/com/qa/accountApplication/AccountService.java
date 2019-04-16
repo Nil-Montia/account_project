@@ -1,9 +1,12 @@
 package com.qa.accountApplication;
 
+import com.google.gson.Gson;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class AccountService {
+	private static Gson gson= new Gson();
 	private static Map<Integer, Account> map= new HashMap<Integer, Account>();
 	
 	public static void addAccount(String fname, String lname, int accountNumber) {
@@ -14,4 +17,13 @@ public class AccountService {
 	public static Account retrieveAccount(int accountNumber){
 	    return map.get(accountNumber);
     }
+
+    public static void jsonify(Account acc){
+		gson.toJson(acc, System.out);
+	}
+
+	public static Account dejsonify(String json){
+		Account account = gson.fromJson(json, Account.class);
+		return account;
+	}
 }

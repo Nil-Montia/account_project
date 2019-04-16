@@ -31,7 +31,9 @@ public class AccountServiceTest extends TestCase {
         assertNotNull(accountService.getMap());
     }
 
-    public void testAddAccount() {
+    @Test
+    public void testCycleMethodExists() {
+        accountService.nameCycle();
     }
 
     public void testRetrieveAccount() {

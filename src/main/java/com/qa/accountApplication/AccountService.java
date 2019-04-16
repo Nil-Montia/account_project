@@ -23,7 +23,7 @@ public class AccountService {
 	}
 
 	public static Account dejsonify(String json){
-		Account account = gson.fromJson(json, Account.class);
-		return account;
+		return gson.fromJson(json, Account.class);
 	}
+
 }

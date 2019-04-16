@@ -3,6 +3,7 @@ package com.qa.accountApplication;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class AccountServiceTest extends TestCase {
     private AccountService accountService;
@@ -19,15 +20,15 @@ public class AccountServiceTest extends TestCase {
     public void tearDown() throws Exception {
     }
 
+    @Test
     public void testCreateAccountService(){
         AccountService accounty=new AccountService();
         assertNotNull(accounty);
     }
 
+    @Test
     public void testGetMap() {
-    }
-
-    public void testSetMap() {
+        assertNotNull(accountService.getMap());
     }
 
     public void testAddAccount() {

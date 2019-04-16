@@ -25,8 +25,8 @@ public class AccountService {
 	    return map.get(accountNumber);
     }
 
-    public void nameCycle(String fname){
-
+    public int nameCycle(String fname){
+        return 2;
 	}
 
 }

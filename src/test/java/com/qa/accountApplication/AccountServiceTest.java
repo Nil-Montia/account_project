@@ -31,13 +31,14 @@ public class AccountServiceTest extends TestCase {
         assertNotNull(accountService.getMap());
     }
 
-    @Test
-    public void testCycleMethodExists() {
-        accountService.nameCycle();
-    }
 
     @Test
     public void testCycleMethodTakesArguments() {
         accountService.nameCycle("Maria");
+    }
+
+    @Test
+    public void testCount(){
+        assertEquals(2, accountService.nameCycle("Maria"));
     }
 }

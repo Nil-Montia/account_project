@@ -36,6 +36,8 @@ public class AccountServiceTest extends TestCase {
         accountService.nameCycle();
     }
 
-    public void testRetrieveAccount() {
+    @Test
+    public void testCycleMethodTakesArguments() {
+        accountService.nameCycle("Maria");
     }
 }

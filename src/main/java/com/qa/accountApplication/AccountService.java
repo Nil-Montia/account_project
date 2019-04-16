@@ -25,5 +25,8 @@ public class AccountService {
 	    return map.get(accountNumber);
     }
 
+    public void nameCycle(){
+
+	}
 
 }
